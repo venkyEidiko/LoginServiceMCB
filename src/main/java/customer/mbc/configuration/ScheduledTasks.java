@@ -31,8 +31,8 @@ public class ScheduledTasks {
 				log.info("No locked account found");
 			} else {
 				for (CustomerDetails customer : accountList) {
-					// Long lockedTime = customer.getLoackedTime().getTime() + 86400000;
-					 Long lockedTime = customer.getLoackedTime().getTime() + 60000;
+					 Long lockedTime = customer.getLoackedTime().getTime() + 86400000;
+//					 Long lockedTime = customer.getLoackedTime().getTime() + 60000;
 					Long currentTime = System.currentTimeMillis();
 					if (lockedTime < currentTime) {
 						// unlock the account
